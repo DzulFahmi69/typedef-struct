@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+typedef struct
+{
+ int Tanggal, Bulan, Tahun;
+}Tanggal;
+
+typedef struct {
+
+char Nama[50];
+ int Usia;
+ Tanggal Tgl_Lahir;
+
+}Manusia;
+
+typedef struct
+{
+ char npm[50];
+ Manusia biodata;
+ Manusia ayah;
+
+}Mahasiswa;
+
+int main()
+{
+ Mahasiswa m;
+printf(" BIODATA MAHASISWA ");
+printf("\nMasukan Npm : ");scanf("%s",m.npm);
+getchar();
+printf("Nama Mahasiswa : ");scanf("%[^\n]",m.biodata.Nama);
+getchar();
+printf("\n Tanggal Lahir Mahasiswa ");
+ printf("\nTanggal Lahir : ");scanf("%d",&m.biodata.Tgl_Lahir.Tanggal);
+ printf("Bulan Lahir : ");scanf("%d",&m.biodata.Tgl_Lahir.Bulan);
+ printf("Tahun Lahir : ");scanf("%d",&m.biodata.Tgl_Lahir.Tahun);
+ printf("Usia Sekarang : ");scanf("%d",&m.biodata.Usia);
+getchar();
+ printf("\nNpm Saya : %s\nNama : %s \nUsia : %d \nLahir Pada : %02d-%02d-%02d \n ",
+ m.npm,m.biodata.Nama,m.biodata.Usia,m.biodata.Tgl_Lahir
+ );
+
+printf("\n Data Orangtua ");
+printf("\nNama Ayah : ");scanf("%[^\n]",m.ayah.Nama);
+getchar();
+printf("\n Tanggal Lahir Ayah ");
+printf("\nTanggal Lahir : ");scanf("%d",&m.ayah.Tgl_Lahir.Tanggal);
+printf("Bulan Lahir : ");scanf("%d",&m.ayah.Tgl_Lahir.Bulan);
+printf("Tahun Lahir : ");scanf("%d",&m.ayah.Tgl_Lahir.Tahun);
+printf("Usia sekarang : ");scanf("%d",&m.ayah.Usia);
+getchar();
+ printf("\nNama Ayah : %s \nUsia : %d \nLahir : %02d-%02d-%02d \n",
+ m.ayah.Nama,m.ayah.Usia,m.ayah.Tgl_Lahir);
+ return 0;
+
+}
